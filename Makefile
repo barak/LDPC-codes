@@ -30,7 +30,7 @@ tests = mod2dense-test mod2sparse-test mod2convert-test rand-test
 
 tests: $(tests)
 
-CFLAGS += -Wall -Wno-maybe-uninitialized
+CFLAGS += -Wall
 CFLAGS += -O2
 CFLAGS += -g
 LOADLIBES += -lm

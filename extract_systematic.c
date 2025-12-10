@@ -26,7 +26,7 @@
 #include "mod2convert.h"
 #include "rcode.h"
 
-void usage(void);
+_Noreturn void usage(void);
 
 
 /* MAIN PROGRAM. */
@@ -82,7 +82,7 @@ int main
 
 /* PRINT USAGE MESSAGE AND EXIT. */
 
-void usage(void)
+_Noreturn void usage(void)
 { fprintf(stderr,
     "Usage: extract gen-file systematic_file\n");
   exit(1);

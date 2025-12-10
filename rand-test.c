@@ -51,7 +51,7 @@ most programming errors.
 
 #define Max_bins 1000		/* Maximum number of histogram bins */
 
-static void usage (void);
+_Noreturn static void usage (void);
 
 
 /* MAIN PROGRAM. */
@@ -257,7 +257,7 @@ int main
 
 /* PRINT USAGE MESSAGE AND EXIT. */
 
-static void usage (void)
+_Noreturn static void usage (void)
 {
   fprintf(stderr,
    "Usage: rand-test seed generator { parameters } / sample-size [ low high bins ]\n");

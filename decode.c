@@ -31,7 +31,7 @@
 #include "dec.h"
 
 
-void usage(void);
+_Noreturn void usage(void);
 
 
 /* MAIN PROGRAM. */
@@ -388,7 +388,7 @@ done:
 /* PRINT USAGE MESSAGE AND EXIT. */
 
 
-void usage(void)
+_Noreturn void usage(void)
 { fprintf(stderr,"Usage:\n");
   fprintf(stderr,
 "  decode [ -f ] [ -t | -T ] pchk-file received-file decoded-file [ bp-file ] channel method\n");
