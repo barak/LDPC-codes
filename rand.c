@@ -512,8 +512,7 @@ static int this_nrand48_r (unsigned short int xsubi[3],
 static int this_drand48_iterate (unsigned short int xsubi[3],
                             struct this_drand48_data *buffer);
 
-static long int this_nrand48 (xsubi)
-     unsigned short int xsubi[3];
+static long int this_nrand48 (unsigned short int xsubi[3])
 {
   long int result;
 
@@ -522,10 +521,9 @@ static long int this_nrand48 (xsubi)
   return result;
 }
 
-static int this_nrand48_r (xsubi, buffer, result)
-     unsigned short int xsubi[3];
-     struct this_drand48_data *buffer;
-     long int *result;
+static int this_nrand48_r (unsigned short int xsubi[3],
+			   struct this_drand48_data *buffer,
+			   long int *result)
 {
   /* Compute next state.  */
   if (this_drand48_iterate (xsubi, buffer) < 0)
@@ -540,9 +538,8 @@ static int this_nrand48_r (xsubi, buffer, result)
   return 0;
 }
 
-static int this_drand48_iterate (xsubi, buffer)
-     unsigned short int xsubi[3];
-     struct this_drand48_data *buffer;
+static int this_drand48_iterate (unsigned short int xsubi[3],
+				 struct this_drand48_data *buffer)
 {
   uint64_t X;
   uint64_t result;
